@@ -1,9 +1,5 @@
-const reverseString = function(string) {
-  let stringReversed = ''
-  for(i = -1; i >= (string.length) * (-1); i--) {
-    stringReversed += string.at(i);
-    }
-  return stringReversed;
+const reverseString = function (string) {
+  return string.split("").reverse().join("");
 };
 
 // Do not edit below this line
