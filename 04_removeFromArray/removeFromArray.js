@@ -1,30 +1,19 @@
-const removeFromArray = function(array, ...removedValues) {
-  let array2 = [];
-   for (i = 0; i < removedValues.length; i++) {
-    if (array.includes(removedValues[i])) {
-      array2.push(removedValues[i]);
-   }
-   }
-
-   let array3 = [];
-   for(i = 0; i < array.length; i++) {
-    if(array2.includes(array[i])){
-      continue;
-    } else {
-      array3.push(array[i]);
+const removeFromArray = function (array, ...args) {
+  const newArray = [];
+  array.forEach((item) => {
+    if (!args.includes(item)) {
+      newArray.push(item);
     }
-    }
-    return array3;
-  };
-  
+  });
+  return newArray;
+};
 
+// A simpler, but more advanced way to do it is to use the 'filter' function,
+// which basically does what we did with the forEach above.
 
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
+// var removeFromArray = function(array, ...args) {
+//   return array.filter(val => !args.includes(val))
+// }
+//
 
-//check item by item of array2 against array
-//if there is a match, return the item
-//remove the returned item from an array
-//if there is no match, continue
-
-// Do not edit below this line
 module.exports = removeFromArray;
