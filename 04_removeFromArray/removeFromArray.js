@@ -3,11 +3,20 @@ const removeFromArray = function(array, ...removedValues) {
    for (i = 0; i < removedValues.length; i++) {
     if (array.includes(removedValues[i])) {
       array2.push(removedValues[i]);
-   } 
-  }
-  
- };
+   }
+   }
 
+   let array3 = [];
+   for(i = 0; i < array.length; i++) {
+    if(array2.includes(array[i])){
+      continue;
+    } else {
+      array3.push(array[i]);
+    }
+    }
+    return array3;
+  };
+  
 
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments
