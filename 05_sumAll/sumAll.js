@@ -1,8 +1,24 @@
-const sumAll = function() {
-
+const sumAll = function(start,end) {
+  let FinalNumber = 0;
+  if (typeof(start) !=='number' || typeof(end) !== 'number') {
+    return 'ERROR'
+  }
+  else if (end < 0 || start < 0) {
+    return 'ERROR'
+  }
+  else if (end < start) {
+  for (end; end <= start; end++) {
+    FinalNumber += end;
+  }
+  } else {
+  for (start; start <= end; start++) {
+    FinalNumber += start;
+  };
+};
+  return FinalNumber;
 };
 
-
+/*
 1,6
 (start) 
 (start)+ 2
@@ -18,7 +34,7 @@ zaczynam loop
 zaczynam od startu
 zwracam nowy numer 
 sum2 += dodaje numer do sum1
-
+*/
 
 
 // Do not edit below this line
