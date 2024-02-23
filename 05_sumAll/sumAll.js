@@ -7,35 +7,16 @@ const sumAll = function(start,end) {
     return 'ERROR'
   }
   else if (end < start) {
-  for (end; end <= start; end++) {
-    FinalNumber += end;
+    for (end; end <= start; end++) {
+      FinalNumber += end;
   }
   } else {
-  for (start; start <= end; start++) {
-    FinalNumber += start;
+    for (start; start <= end; start++) {
+      FinalNumber += start;
   };
 };
   return FinalNumber;
 };
-
-/*
-1,6
-(start) 
-(start)+ 2
-(start + 2)+ 3
-(start + 2 + 3) + 4
-(start + 2 + 3 +  4) + 5
-(start + 2 + 3 +  4  + 5) + end
-break
-
-sum1 = 0
-sumuje dwa numery (start,end)
-zaczynam loop
-zaczynam od startu
-zwracam nowy numer 
-sum2 += dodaje numer do sum1
-*/
-
 
 // Do not edit below this line
 module.exports = sumAll;
