@@ -1,16 +1,20 @@
 const leapYears = function(input) {
-  if (input % 4 == 0) {
-    if (input % 100 != 0 && input % 400 == 0) {
-      return true
-    }
+  if ((input % 4 == 0) && (input % 100 != 0 || input % 400 == 0)) {
+    return true;
   } else {
-    return false
+    return false;
   }
 };
 
 // Do not edit below this line
 module.exports = leapYears;
 
+// if divisible only by 4 then cool 
+//BUT
+// if by 4 and 100
+//then 
+//s/b divisible by 400 also
+// otherwise FALSE 
 /*
 Create a function that determines whether or not a given year is a leap year. Leap years are determined by the following rules:
 
@@ -24,7 +28,7 @@ Create a function that determines whether or not a given year is a leap year. Le
 leapYears(2000) // is a leap year: returns true
 leapYears(1985) // is not a leap year: returns false
 ```
-
+by 4? yes -> leap no -> false
 
 ## Hints
 - use an `if` statement and `&&` to make sure all the conditions are met properly
