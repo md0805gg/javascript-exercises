@@ -13,7 +13,7 @@ const sum = function([...numbers]) {
   }
   return Number(finalSum);
 };
-
+//BEFORE STARTING WITH MULTIPLY, TRY TO UNDERSTAND WHY DID I HAVE TO MAKE AN ARRAY OF ...NUMBERS REST PARAMETER, INSTEAD OF JUST ...NUMBERS PARAMETER
 const multiply = function() {
 
 };
