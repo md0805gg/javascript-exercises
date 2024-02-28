@@ -11,7 +11,7 @@ const sum = function([...numbers]) {
   for(let i = 0; i < numbers.length; i++) {
     finalSum += numbers[i];
   }
-  return Number(finalSum);
+  return finalSum;
 };
 //BEFORE STARTING WITH MULTIPLY, TRY TO UNDERSTAND WHY DID I HAVE TO MAKE AN ARRAY OF ...NUMBERS REST PARAMETER, INSTEAD OF JUST ...NUMBERS PARAMETER
 const multiply = function() {
