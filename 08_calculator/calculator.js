@@ -22,8 +22,12 @@ const power = function(x, y) {
 	return Math.pow(x , y)
 };
 
-const factorial = function() {
-	
+const factorial = function(lastNumber) {
+  array = [];
+	for (let i = 1; i <=lastNumber; i++) {
+    array.push(i);
+  };
+  return array.reduce(((factorial, currentNumber) => factorial * currentNumber),1);
 };
 
 // Do not edit below this line
