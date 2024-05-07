@@ -18,8 +18,8 @@ const multiply = function([...numbers]) {
   return numbers.reduce((multiplied, current) => multiplied * current, 1)
 };
 
-const power = function() {
-	
+const power = function(x, y) {
+	return Math.pow(x , y)
 };
 
 const factorial = function() {
