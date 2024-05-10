@@ -1,9 +1,10 @@
 const palindromes = function (input) {
-  // create var cottaining array of forbidden characters
-  let forbidden = [',','.',' '];
-//convert input into array of characters
-  inputToArray = input.split('');
-//iterate though each character with includes forbidden characters
+  let forbidden = [',','.',' ','!'];
+  inputToArray = input.split('')
+                      .filter((char) => !forbidden.includes(char));
+  return inputToArray.join('').toLowerCase() == inputToArray.reverse().join('').toLowerCase();
 };
+
+
 // Do not edit below this line
 module.exports = palindromes;
