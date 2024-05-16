@@ -1,11 +1,23 @@
 const fibonacci = function(number) {
   arrayForSequence = [];
-  for (let i = 0; i <= number; i++) {
-    arrayForSequence.push(i);
+  if (number < 0) {
+    return 'OOPS'
+  } else if (number == 1) {
+    return 1;
+  } else {
+    for (let i = 1; i <= number; i++) {
+      if (i == 1) {
+        arrayForSequence.push(1);
+      } else {
+        c = arrayForSequence.slice(-2)
+                            .reduce((sum,current) => sum + current);
+        arrayForSequence.push(c);
+      }
+    }
+    numbersForSequence = arrayForSequence.slice(-3,-1);
+    finalNumber = numbersForSequence.reduce((sum, current) => sum + current, 0);
+    return finalNumber;
   }
-  numbersForSequence = arrayForSequence.slice(-3,-1);
-  finalNumber = numbersForSequence.reduce((sum, current) => sum + current, 0);
-  return finalNumber;
 };
 
 // Do not edit below this line
