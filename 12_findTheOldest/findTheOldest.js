@@ -2,7 +2,7 @@ const findTheOldest = function(array) {
   let objectWithAge = array.map((item) => 
      ({
       name: item.name,
-      age: item.yearOfDeath - item.yearOfBirth
+      age: (item.yearOfDeath || new Date().getFullYear()) - item.yearOfBirth
     })
   );
   return greatestAge = objectWithAge.reduce((previous, current) =>  
